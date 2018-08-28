@@ -18,10 +18,15 @@ public class Main {
 				getInputToInputString(">>>");
 				InputStringArray = InputString.split(" ");
 				
-				switch(InputString) {
+				switch(InputStringArray[0]) {
+				case "exit":
+					Commands.exitCommand();
+					break;
 					
+				default:
+					System.out.print("Unrecognized Command: " + InputStringArray[0] + "\n");
 				}
-				}
+			}
 			catch(Exception e) {
 				System.out.print("ERROR, Exception thrown\n");
 			}
@@ -29,12 +34,11 @@ public class Main {
 	}
 	
 	/*
-	 * NEW LINE WILL BE PRINTED AFTERWARDS
+	 * NEW LINE WILL BE PRINTED AFTERWARDS BY USER
 	 * TEXT MUST NOT HAVE TERMINATING NEWLINE
 	 */
 	public static void getInputToInputString(String text) throws IOException {
 		System.out.print(text);
 		InputString = reader.readLine();
-		System.out.print("\n");
 	}
 }
