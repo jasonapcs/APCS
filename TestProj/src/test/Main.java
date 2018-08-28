@@ -23,8 +23,13 @@ public class Main {
 					Commands.exitCommand();
 					break;
 					
+				case "echo":
+					Commands.echoCommand();
+					break;
+					
 				default:
 					System.out.print("Unrecognized Command: " + InputStringArray[0] + "\n");
+					break;
 				}
 			}
 			catch(Exception e) {
