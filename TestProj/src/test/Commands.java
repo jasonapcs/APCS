@@ -4,6 +4,10 @@ import java.io.*;
 
 public class Commands {
 	
+	/*
+	 * This function execute the command 'man'
+	 * It also handles exceptions from execution code
+	 */
 	public static void exitCommand() {
 		int temp;
 		try {
@@ -18,7 +22,7 @@ public class Commands {
 	
 	/*
 	 * This function executes the command 'echo'
-	 * It also handles any exceptions that 
+	 * It also handles any exceptions that could occur
 	 */
 	public static void echoCommand() {
 		try {
@@ -32,6 +36,12 @@ public class Commands {
 		}
 	}
 	
+	
+	/*
+	 * This function executes the command 'man'
+	 * It also handles exceptions that could occur
+	 * Possible candidate for splitting apart
+	 */
 	public static void manCommand() {
 		int temp;
 		try {
