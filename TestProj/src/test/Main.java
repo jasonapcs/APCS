@@ -18,6 +18,11 @@ public class Main {
 				getInputToInputString(">>>");
 				InputStringArray = InputString.split(" ");
 				
+				/*
+				 * Begins parsing commands
+				 * Tests which command in first position of InputStringArray
+				 * Then passes control to specialized function 
+				 */
 				switch(InputStringArray[0]) {
 				case "exit":
 					Commands.exitCommand();
@@ -25,6 +30,10 @@ public class Main {
 					
 				case "echo":
 					Commands.echoCommand();
+					break;
+					
+				case "man":
+					Commands.manCommand();
 					break;
 					
 				default:
