@@ -24,6 +24,7 @@ public class Main {
 				 * Then passes control to specialized function 
 				 */
 				switch(InputStringArray[0]) {
+				
 				case "exit":
 					Commands.exitCommand();
 					break;
