@@ -2,14 +2,14 @@ package test;
 
 import java.io.*;
 
-
-
+/*
+ * Main class
+ */
 public class Main {
 	
 	static String InputString;
 	static String[] InputStringArray;
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-	
 	
 	public static void main(String[] args) {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
