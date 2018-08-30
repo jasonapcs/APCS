@@ -31,4 +31,49 @@ public class Commands {
 					+ "\'echo\' command syntax is: echo <String>\n");
 		}
 	}
+	
+	public static void manCommand() {
+		int temp;
+		try {
+			Main.InputStringArray = Main.InputString.split(" ", 2);
+			try {
+				temp = Integer.parseInt(Main.InputStringArray[1]);
+				
+				// KEEP THIS ORGANIZED ALPHABETICALLY
+				switch (temp) {
+				case 1:
+					System.out.print("\'echo\'  : echo <String>\n");
+					System.out.print("\'exit\'  : exit <ExitCode>\n");
+					System.out.print("\'man\'   : man <page> | man <command>\n");
+					break;
+					
+				default:
+					System.out.print("Unrecognized Page " + temp + ", please try again\n");
+					break;
+				}
+			}
+			catch(Exception e) {
+				switch(Main.InputStringArray[1]) {
+				case "exit":
+					System.out.print("\'exit\' command syntax is: exit <ExitCode>\n");
+					break;
+					
+				case "echo":
+					System.out.print("\'echo\' command syntax is: echo <String>\n");
+					break;
+					
+				case "man":
+					System.out.print("\'man\' command syntax is: man <page> | man <command>\n");
+					break;
+					
+				default: System.out.print("Unrecognized Command " + Main.InputStringArray[1] +
+						", please try again\n");
+				}
+			}
+		}
+		catch(Exception e) {
+			System.out.print("Error: Syntax\n"
+					+ "\'man\' command syntax is: man <page> | man <command>\n");
+		}
+	}
 }
