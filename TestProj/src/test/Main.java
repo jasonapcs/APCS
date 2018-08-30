@@ -15,7 +15,7 @@ public class Main {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
 				+ "Year: 2018; By: JASON ZHANG");
 		
-		for(;;) {
+		for(;;) {    // Main program loop
 			try {
 				getInputToInputString(">>>");
 				InputStringArray = InputString.split(" ");
