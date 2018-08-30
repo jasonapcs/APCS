@@ -1,5 +1,9 @@
 package test;
 
+
+/*
+ * A convenient way to store commands
+ */
 public class Commands {
 	
 	/*
