@@ -32,6 +32,10 @@ public class Main {
 					Commands.echoCommand();
 					break;
 					
+				case "man":
+					Commands.manCommand();
+					break;
+					
 				default:
 					System.out.print("Unrecognized Command: " + InputStringArray[0] + "\n");
 					break;
