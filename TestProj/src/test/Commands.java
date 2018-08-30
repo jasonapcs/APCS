@@ -1,6 +1,5 @@
 package test;
 
-
 /*
  * A convenient way to store commands
  */

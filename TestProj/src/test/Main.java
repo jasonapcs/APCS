@@ -2,6 +2,8 @@ package test;
 
 import java.io.*;
 
+
+
 public class Main {
 	
 	static String InputString;
