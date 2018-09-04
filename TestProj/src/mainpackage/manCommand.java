@@ -1,6 +1,12 @@
-package test;
+package mainpackage;
 
 public class manCommand extends Command {
+	
+	/*
+	 * This function executes the command 'man'
+	 * It also handles exceptions that could occur
+	 * Possible candidate for splitting apart
+	 */
 	public void execute(String Input) {
 		int temp;
 		String InputArray[];

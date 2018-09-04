@@ -1,4 +1,4 @@
-package test;
+package mainpackage;
 
 /*
  * A convenient way to store commands

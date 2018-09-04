@@ -1,4 +1,4 @@
-package test;
+package mainpackage;
 
 public class exitCommand extends Command {
 	
