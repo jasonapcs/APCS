@@ -13,7 +13,7 @@ public class Main {
 	static String[] InputStringArray;
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
 				+ "Year: 2018; By: JASON ZHANG");
 		
@@ -27,21 +27,28 @@ public class Main {
 				 * Tests which command in first position of InputStringArray
 				 * Then passes control to specialized function 
 				 */
-				for (int i = 0; i <= allCommands.length; i++) {
-					if (i == allCommands.length) {
-						System.out.print("Unrecognized command: \'" + InputStringArray[0]
-								+ "\'\nTry using \'man\' to get commands\n");
-						break;
-					}
+				switch(InputStringArray[0]) {
+				case "exit":
+					allCommands[0].execute(InputString);
+					break;
 					
-					if (InputStringArray[0].equals(allCommands[i].commandID)) {
-						allCommands[i].execute(InputString);
-						break;
-					}
+				case "echo":
+					allCommands[1].execute(InputString);
+					break;
+					
+				case "man":
+					allCommands[2].execute(InputString);
+					break;
+					
+				default:
+					System.out.print("Unrecognized command: \'" + 
+				InputStringArray[0] + "\'\nTry using 'man' to get commands\n");
+					break;
 				}
+				
 			}
 			catch(Exception e) {
-				System.out.print("ERROR, Exception thrown\n");
+				System.out.print("ERROR: Unhandled exception thrown\n");
 			}
 		}
 	}
