@@ -1,4 +1,4 @@
-package test;
+package mainpackage;
 
 import java.io.*;
 
@@ -12,8 +12,6 @@ public class Main {
 	static String InputString;
 	static String[] InputStringArray;
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-	
-	static int tempint;
 	
 	public static void main(String[] args) {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
@@ -29,16 +27,16 @@ public class Main {
 				 * Tests which command in first position of InputStringArray
 				 * Then passes control to specialized function 
 				 */
-				tempint = 1;
-				for (Command c : allCommands) {
-					if (InputStringArray[0] == c.commandID) {
-						c.execute(InputString);
-					}
-					else if (tempint >= allCommands.length) {
+				for (int i = 0; i <= allCommands.length; i++) {
+					if (i == allCommands.length) {
+						System.out.print("Unrecognized command: \'" + InputStringArray[0]
+								+ "\'\nTry using \'man\' to get commands\n");
 						break;
 					}
-					else {
-						tempint++;
+					
+					if (InputStringArray[0].equals(allCommands[i].commandID)) {
+						allCommands[i].execute(InputString);
+						break;
 					}
 				}
 			}
