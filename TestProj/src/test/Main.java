@@ -7,9 +7,13 @@ import java.io.*;
  */
 public class Main {
 	
+	static Command allCommands[] = { new exitCommand(), new echoCommand(), new manCommand() };
+	
 	static String InputString;
 	static String[] InputStringArray;
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	
+	static int tempint;
 	
 	public static void main(String[] args) {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
@@ -25,23 +29,17 @@ public class Main {
 				 * Tests which command in first position of InputStringArray
 				 * Then passes control to specialized function 
 				 */
-				switch(InputStringArray[0]) {
-				
-				case "exit":
-					Commands.exitCommand();
-					break;
-					
-				case "echo":
-					Commands.echoCommand();
-					break;
-					
-				case "man":
-					Commands.manCommand();
-					break;
-					
-				default:
-					System.out.print("Unrecognized Command: " + InputStringArray[0] + "\n");
-					break;
+				tempint = 1;
+				for (Command c : allCommands) {
+					if (InputStringArray[0] == c.commandID) {
+						c.execute(InputString);
+					}
+					else if (tempint >= allCommands.length) {
+						break;
+					}
+					else {
+						tempint++;
+					}
 				}
 			}
 			catch(Exception e) {
