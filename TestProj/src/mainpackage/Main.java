@@ -14,8 +14,7 @@ public class Main {
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
 	public static void main(String[] args) throws IOException {
-		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
-				+ "Year: 2018; By: JASON ZHANG");
+		System.out.println("CONSOLE TESTING ENVIRONMENT\n");
 		
 		for(;;) {    // Main program loop
 			try {
