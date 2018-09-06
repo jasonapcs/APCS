@@ -21,7 +21,7 @@ public class manCommand extends Command {
 					System.out.print("\'echo\'  : echo <String>\n");
 					System.out.print("\'exit\'  : exit <ExitCode>\n");
 					System.out.print("\'man\'   : man <page> | man <command>\n");
-					System.out.print("\'mkdir\' : mkdir <path/to/dir>");
+					System.out.print("\'mkdir\' : mkdir <path/to/dir>\n");
 					break;
 					
 				default:
