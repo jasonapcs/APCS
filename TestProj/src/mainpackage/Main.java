@@ -8,7 +8,7 @@ import java.io.*;
 public class Main {
 	
 	static Command allCommands[] = { new exitCommand(), new echoCommand(),
-			new manCommand(), new mkdirCommand() };
+			new manCommand() };
 	
 	static String InputString;
 	static String[] InputStringArray;
