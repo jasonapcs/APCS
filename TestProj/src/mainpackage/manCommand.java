@@ -21,6 +21,7 @@ public class manCommand extends Command {
 					System.out.print("\'echo\'  : echo <String>\n");
 					System.out.print("\'exit\'  : exit <ExitCode>\n");
 					System.out.print("\'man\'   : man <page> | man <command>\n");
+					System.out.print("\'mkdir\' : mkdir <path/to/dir>");
 					break;
 					
 				default:
@@ -40,6 +41,10 @@ public class manCommand extends Command {
 					
 				case "man":
 					System.out.print("\'man\' command syntax is: man <page> | man <command>\n");
+					break;
+					
+				case "mkdir":
+					System.out.print("\'mkdir\' command syntax is: mkdir <path/to/dir>");
 					break;
 					
 				default: System.out.print("Unrecognized Command " + InputArray[1] +
