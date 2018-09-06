@@ -40,9 +40,6 @@ public class Main {
 					allCommands[2].execute(InputString);
 					break;
 					
-				case "mkdir":
-					allCommands[3].execute(InputString);
-					break;
 					
 				default:
 					System.out.print("Unrecognized command: \'" + 
