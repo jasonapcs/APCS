@@ -1,19 +1,23 @@
-package test;
+package mainpackage;
 
 import java.io.*;
 
+/*
+ * Main class
+ */
 public class Main {
+	
+	static Command allCommands[] = { new exitCommand(), new echoCommand(), new manCommand() };
 	
 	static String InputString;
 	static String[] InputStringArray;
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
-	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		System.out.println("CONSOLE TESTING ENVIRONMENT\n"
 				+ "Year: 2018; By: JASON ZHANG");
 		
-		for(;;) {
+		for(;;) {    // Main program loop
 			try {
 				getInputToInputString(">>>");
 				InputStringArray = InputString.split(" ");
@@ -25,24 +29,26 @@ public class Main {
 				 */
 				switch(InputStringArray[0]) {
 				case "exit":
-					Commands.exitCommand();
+					allCommands[0].execute(InputString);
 					break;
 					
 				case "echo":
-					Commands.echoCommand();
+					allCommands[1].execute(InputString);
 					break;
 					
 				case "man":
-					Commands.manCommand();
+					allCommands[2].execute(InputString);
 					break;
 					
 				default:
-					System.out.print("Unrecognized Command: " + InputStringArray[0] + "\n");
+					System.out.print("Unrecognized command: \'" + 
+				InputStringArray[0] + "\'\nTry using 'man' to get commands\n");
 					break;
 				}
+				
 			}
 			catch(Exception e) {
-				System.out.print("ERROR, Exception thrown\n");
+				System.out.print("ERROR: Unhandled exception thrown\n");
 			}
 		}
 	}

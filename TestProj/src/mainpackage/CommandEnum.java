@@ -1,4 +1,4 @@
-package test;
+package mainpackage;
 
 public enum CommandEnum {
 	exit,  // exit <ExitCode>

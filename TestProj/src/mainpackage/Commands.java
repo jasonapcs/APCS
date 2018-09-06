@@ -1,11 +1,12 @@
-package test;
+package mainpackage;
 
-import java.io.*;
-
+/*
+ * A convenient way to store commands
+ */
 public class Commands {
 	
 	/*
-	 * This function execute the command 'man'
+	 * This function execute the command 'exit'
 	 * It also handles exceptions from execution code
 	 */
 	public static void exitCommand() {
