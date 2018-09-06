@@ -7,7 +7,8 @@ import java.io.*;
  */
 public class Main {
 	
-	static Command allCommands[] = { new exitCommand(), new echoCommand(), new manCommand() };
+	static Command allCommands[] = { new exitCommand(), new echoCommand(),
+			new manCommand(), new mkdirCommand() };
 	
 	static String InputString;
 	static String[] InputStringArray;
@@ -37,6 +38,10 @@ public class Main {
 					
 				case "man":
 					allCommands[2].execute(InputString);
+					break;
+					
+				case "mkdir":
+					allCommands[3].execute(InputString);
 					break;
 					
 				default:
